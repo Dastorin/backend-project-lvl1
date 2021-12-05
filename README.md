@@ -4,4 +4,4 @@
 ![CI](https://github.com/Dastorin/backend-project-lvl1/actions/workflows/b-games.yml/badge.svg)
 
  https://asciinema.org/a/tkUuKZHdx7UpDoAkcjqekpvFF
- 
+ https://asciinema.org/connect/84940029-a1af-4604-9f48-6cae34b2e044
