@@ -3,5 +3,6 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![CI](https://github.com/Dastorin/backend-project-lvl1/actions/workflows/b-games.yml/badge.svg)
 
- https://asciinema.org/a/tkUuKZHdx7UpDoAkcjqekpvFF
- https://asciinema.org/connect/84940029-a1af-4604-9f48-6cae34b2e044
+## Example
+
+https://asciinema.org/a/66sxiDlAKtTWsqzzXefNmUD9V
