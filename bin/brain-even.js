@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-console.log('Answer "yes" if the number is even, otherwise answer "no"');
+import acquaintance from '../src/cli.js';
+import evenAndOdd from '../src/even-and-odd.js';
+
+acquaintance();
+evenAndOdd();
