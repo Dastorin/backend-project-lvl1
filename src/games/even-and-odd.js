@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const error = (name) => { // функция в случае неверного ответа.
   console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-  console.log(`Let's try again, ${name}!`); // вместо name необходимо подставить имя пользователя из модуля cli.js
+  console.log(`Let's try again, ${name}!`);
 };
 
 const evenAndOdd = () => { // функция чет/нечет
@@ -24,8 +24,7 @@ const evenAndOdd = () => { // функция чет/нечет
       return error(name); // в случае неверного ответа вызов функции error
     }
   }
-  // окончание функции после трех верных ответов вместо name
-  // необходимо подставить имя пользователя из cli.js
+  // окончание функции после трех верных ответов
   return console.log(`Congratulations, ${name}!`);
 };
 export default evenAndOdd;
