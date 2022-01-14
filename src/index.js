@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import readlineSync from 'readline-sync';
 import acquaintance from './games/cli.js'; // импорт приветсвия
 import evenAndOdd from './games/even-and-odd.js';// импорт впроса игры чет нечет
 import calc from './games/calc.js';// импорт вопроса игры калькулятор
@@ -21,13 +22,12 @@ const games = (game) => {
     } if (game === 'calc') {
       item = calc();// присвоение переменной модуля игры калькулятор
     }
-    const answerCor = item[0];
-    const answer = item[1];
-    if (answerCor === answer) {
+    const answer = readlineSync.question('Your answer: '); // запрос ответа от пользователя;
+    if (item === answer) {
       count += 1;
       console.log('Correct!');
     } else {
-      return error(answer, answerCor, name);
+      return error(answer, item, name);
     }
   }
   return console.log(`Congratulations, ${name}`);
