@@ -8,5 +8,6 @@
 
 
 ## Example 
-https://asciinema.org/a/66sxiDlAKtTWsqzzXefNmUD9V
-https://asciinema.org/a/huJfbTe6B7fKk2XMZFtXUzX2G
+brain-even https://asciinema.org/a/66sxiDlAKtTWsqzzXefNmUD9V
+brain-calc https://asciinema.org/a/huJfbTe6B7fKk2XMZFtXUzX2G
+brain-gcd https://asciinema.org/a/YiOnnbjekChVaGur28DyG8ZVH
