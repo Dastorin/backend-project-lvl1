@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 // функция рандомного задания выражения
 const randomExpr = () => {
   const operand = ['+', '-', '*']; // список операторов
@@ -15,7 +17,7 @@ const calc = () => {
   const num2 = item[2];
   console.log(`Question: ${num1} ${item[1]} ${num2}`); // вывод на экран выражения.
   // подсчет результата рандомного выражения
-  let resultCalc = 0; // ввод переменной резeльтата подсчета выражения
+  let resultCalc = 0; // ввод переменной результата подсчета выражения
   if (item[1] === '+') {
     resultCalc = num1 + num2;
   } if (item[1] === '-') {
@@ -23,7 +25,8 @@ const calc = () => {
   } if (item[1] === '*') {
     resultCalc = num1 * num2;
   }
-  return resultCalc;
+  const answer = readlineSync.question('Your answer: '); // запрос ответа от пользователя;
+  return [resultCalc, Number(answer)];
 };
 
 export default calc;
