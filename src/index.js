@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+import acquaintance from './games/cli.js'; // импорт приветсвия
+import evenAndOdd from './games/even-and-odd.js';// импорт впроса игры чет нечет
+import calc from './games/calc.js';// импорт вопроса игры калькулятор
+import error from './games/error.js';// импорт вывода при ошибке пользователя
+
+const games = (game) => {
+  const name = acquaintance();// приветствие и запрос имени пользователя
+  // объявление правил игры
+  if (game === 'evenAndOdd') {
+    console.log('Правила игры чет нечет');
+  } if (game === 'calc') {
+    console.log('What is the result of the expression?');
+  }
+  let count = 0; // объявлнеие переменно счетчика
+  while (count < 3) { // пока счетчик меньше 3 выполнят цикл
+    let item = 0;// объявление переменной итем, которой
+    // проверка какая игра вызвается
+    if (game === 'evenAndOdd') {
+      item = evenAndOdd();// присвоение переменной модуля игры чет нечет
+    } if (game === 'calc') {
+      item = calc();// присвоение переменной модуля игры калькулятор
+    }
+    const answerCor = item[0];
+    const answer = item[1];
+    if (answerCor === answer) {
+      count += 1;
+      console.log('Correct!');
+    } else {
+      return error(answer, answerCor, name);
+    }
+  }
+  return console.log(`Congratulations, ${name}`);
+};
+export default games;
