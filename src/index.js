@@ -8,7 +8,7 @@ const games = (game) => {
   const name = acquaintance();// приветствие и запрос имени пользователя
   // объявление правил игры
   if (game === 'evenAndOdd') {
-    console.log('Правила игры чет нечет');
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
   } if (game === 'calc') {
     console.log('What is the result of the expression?');
   }
