@@ -61,6 +61,6 @@ const games = (game) => {
       return error(answer, corAnswer, name);// в случае ошибки вызов модуля error
     }
   }
-  return console.log(`Congratulations, ${name}`);// после трех верных ответов
+  return console.log(`Congratulations, ${name}!`);// после трех верных ответов
 };
 export default games;
