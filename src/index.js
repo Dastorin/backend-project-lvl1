@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import acquaintance from './games/cli.js'; // импорт приветсвия
 import evenAndOdd from './games/even-and-odd.js';// импорт впроса игры чет нечет
 import calc from './games/calc.js';// импорт вопроса игры калькулятор
@@ -52,8 +51,7 @@ const games = (game) => {
       default:
         console.log('Game not defined');
     }
-    const corAnswer = item[0];// извлечение из массива значения правильного ответа
-    const answer = item[1];// извлечение из массива значения ответа пользователя
+    const [corAnswer, answer] = item;
     if (corAnswer === answer) { // сравнение значений
       count += 1;
       console.log('Correct!');
@@ -63,4 +61,5 @@ const games = (game) => {
   }
   return console.log(`Congratulations, ${name}!`);// после трех верных ответов
 };
+
 export default games;
