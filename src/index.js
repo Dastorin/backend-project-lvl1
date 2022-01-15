@@ -2,39 +2,58 @@
 import acquaintance from './games/cli.js'; // импорт приветсвия
 import evenAndOdd from './games/even-and-odd.js';// импорт впроса игры чет нечет
 import calc from './games/calc.js';// импорт вопроса игры калькулятор
-import gcd from './games/gcd.js';
+import gcd from './games/gcd.js';// импорт игры НОД
+import progression from './games/progression.js';// импорт игры ариф. прогрессия
 import error from './games/error.js';// импорт вывода при ошибке пользователя
 
 const games = (game) => {
   const name = acquaintance();// приветствие и запрос имени пользователя
   // объявление правил игры
-  if (game === 'evenAndOdd') {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  } if (game === 'calc') {
-    console.log('What is the result of the expression?');
-  } if (game === 'gcd') {
-    console.log('Find the greatest common divisor of given numbers.');
+  switch (game) {
+    case 'evenAndOdd':
+      console.log('Answer "yes" if the number is even, otherwise answer "no".');
+      break;
+    case 'calc':
+      console.log('What is the result of the expression?');
+      break;
+    case 'gcd':
+      console.log('Find the greatest common divisor of given numbers.');
+      break;
+    case 'progression':
+      console.log('What number is missing in the progression?');
+      break;
+    default:
+      console.log('Game not defined');
   }
   let count = 0; // объявлнеие счетчика
   while (count < 3) { // пока счетчик меньше 3 выполнят цикл
     let item = 0;// объявление переменной итем
     // проверка какая игра вызвается
-    if (game === 'evenAndOdd') {
-      item = evenAndOdd();// присвоение переменной модуля игры чет нечет
-    } if (game === 'calc') {
-      item = calc();// присвоение переменной модуля игры калькулятор
-    } if (game === 'gcd') {
-      item = gcd();
+    switch (game) {
+      case 'evenAndOdd':
+        item = evenAndOdd();// присвоение переменной модуля игры чет нечет
+        break;
+      case 'calc':
+        item = calc();// присвоение переменной модуля игры калькулятор
+        break;
+      case 'gcd':
+        item = gcd();// присвоение переменной модуля игры НОД
+        break;
+      case 'progression':
+        item = progression();// присвоение переменной модуля игры Ариф.прогрессия
+        break;
+      default:
+        console.log('Game not defined');
     }
-    const corAnswer = item[0];
-    const answer = item[1];
-    if (corAnswer === answer) {
+    const corAnswer = item[0];// извлечение из массива значения правильного ответа
+    const answer = item[1];// извлечение из массива значения ответа пользователя
+    if (corAnswer === answer) { // сравнение значений
       count += 1;
       console.log('Correct!');
     } else {
-      return error(answer, corAnswer, name);
+      return error(answer, corAnswer, name);// в случае ошибки вызов модуля error
     }
   }
-  return console.log(`Congratulations, ${name}`);
+  return console.log(`Congratulations, ${name}`);// после трех верных ответов
 };
 export default games;
