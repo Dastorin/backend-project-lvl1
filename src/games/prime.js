@@ -7,7 +7,7 @@ const prime = () => {
   // определение натуральности числа
   let i = 1;
   let result = 0;
-  while (i < num / 2) {
+  while (i <= num / 2) {
     if (num % i === 0) {
       result = i;
     }
