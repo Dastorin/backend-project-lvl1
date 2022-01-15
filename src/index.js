@@ -10,8 +10,9 @@ const games = (rules, game) => {
   const name = acquaintance();// приветствие и запрос имени пользователя
   // объявление правил игры
   console.log(rules);
-  let count = 0; // объявлнеие счетчика
-  while (count < 3) { // пока счетчик меньше 3 выполнят цикл
+  // запуск игры до трех побед
+  const numberWins = 3;// максимальное количество побед
+  for (let i = 0; i < numberWins; i += 1) { // пока счетчик меньше 3 выполняется цикл
     let item = 0;// объявление переменной итем
     // проверка какая игра вызвается
     switch (game) {
@@ -35,7 +36,6 @@ const games = (rules, game) => {
     }
     const [corAnswer, answer] = item;
     if (corAnswer === answer) { // сравнение значений
-      count += 1;
       console.log('Correct!');
     } else {
       return error(answer, corAnswer, name);// в случае ошибки вызов модуля error
