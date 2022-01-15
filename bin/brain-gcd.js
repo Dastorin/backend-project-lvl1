@@ -2,4 +2,5 @@
 
 import games from '../src/index.js';
 
-games('gcd');
+const rules = 'Find the greatest common divisor of given numbers.';
+games(rules, 'gcd');

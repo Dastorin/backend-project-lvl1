@@ -2,4 +2,5 @@
 
 import games from '../src/index.js';
 
-games('evenAndOdd');
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+games(rules, 'evenAndOdd');

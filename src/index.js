@@ -6,28 +6,10 @@ import progression from './games/progression.js';// импорт игры ари
 import prime from './games/prime.js';// импорт игры Простое ли число?
 import error from './games/error.js';// импорт вывода при ошибке пользователя
 
-const games = (game) => {
+const games = (rules, game) => {
   const name = acquaintance();// приветствие и запрос имени пользователя
   // объявление правил игры
-  switch (game) {
-    case 'evenAndOdd':
-      console.log('Answer "yes" if the number is even, otherwise answer "no".');
-      break;
-    case 'calc':
-      console.log('What is the result of the expression?');
-      break;
-    case 'gcd':
-      console.log('Find the greatest common divisor of given numbers.');
-      break;
-    case 'progression':
-      console.log('What number is missing in the progression?');
-      break;
-    case 'prime':
-      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-      break;
-    default:
-      console.log('Game not defined');
-  }
+  console.log(rules);
   let count = 0; // объявлнеие счетчика
   while (count < 3) { // пока счетчик меньше 3 выполнят цикл
     let item = 0;// объявление переменной итем

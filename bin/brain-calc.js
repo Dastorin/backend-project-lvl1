@@ -2,4 +2,5 @@
 
 import games from '../src/index.js';
 
-games('calc');
+const rules = 'What is the result of the expression?';
+games(rules, 'calc');
