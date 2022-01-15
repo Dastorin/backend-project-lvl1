@@ -9,6 +9,9 @@
 
 ## Example 
 brain-even https://asciinema.org/a/66sxiDlAKtTWsqzzXefNmUD9V
+
 brain-calc https://asciinema.org/a/huJfbTe6B7fKk2XMZFtXUzX2G
+
 brain-gcd https://asciinema.org/a/YiOnnbjekChVaGur28DyG8ZVH
+
 brain-progression https://asciinema.org/a/wkDgXyfxES4d9V3e0PKCab2s9
