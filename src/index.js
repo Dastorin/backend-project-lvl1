@@ -4,6 +4,7 @@ import evenAndOdd from './games/even-and-odd.js';// импорт впроса и
 import calc from './games/calc.js';// импорт вопроса игры калькулятор
 import gcd from './games/gcd.js';// импорт игры НОД
 import progression from './games/progression.js';// импорт игры ариф. прогрессия
+import prime from './games/prime.js';// импорт игры Простое ли число?
 import error from './games/error.js';// импорт вывода при ошибке пользователя
 
 const games = (game) => {
@@ -21,6 +22,9 @@ const games = (game) => {
       break;
     case 'progression':
       console.log('What number is missing in the progression?');
+      break;
+    case 'prime':
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
     default:
       console.log('Game not defined');
@@ -41,6 +45,9 @@ const games = (game) => {
         break;
       case 'progression':
         item = progression();// присвоение переменной модуля игры Ариф.прогрессия
+        break;
+      case 'prime':
+        item = prime();// присвоение переменной модуля игры Простое ли число?
         break;
       default:
         console.log('Game not defined');
