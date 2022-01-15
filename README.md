@@ -7,6 +7,7 @@ Installation:
 
 - Clone this repo
 - Install dependencies with 'make install' or 'npm ci'
+- Install games with 'npm link'.
 - Run games with commands corresponding with their names
 - Enjoy :)
 
