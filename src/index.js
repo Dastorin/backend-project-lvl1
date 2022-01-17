@@ -1,9 +1,4 @@
 import acquaintance from './games/cli.js'; // импорт приветсвия
-import evenAndOdd from './games/even-and-odd.js';// импорт впроса игры чет нечет
-import calc from './games/calc.js';// импорт вопроса игры калькулятор
-import gcd from './games/gcd.js';// импорт игры НОД
-import progression from './games/progression.js';// импорт игры ариф. прогрессия
-import prime from './games/prime.js';// импорт игры Простое ли число?
 import error from './games/error.js';// импорт вывода при ошибке пользователя
 
 const games = (rules, game) => {
@@ -11,37 +6,16 @@ const games = (rules, game) => {
   // объявление правил игры
   console.log(rules);
   // запуск игры до трех побед
-  const numberWins = 3;// максимальное количество побед
-  for (let i = 0; i < numberWins; i += 1) { // пока счетчик меньше 3 выполняется цикл
-    let item = 0;// объявление переменной итем
-    // проверка какая игра вызвается
-    switch (game) {
-      case 'evenAndOdd':
-        item = evenAndOdd();// присвоение переменной модуля игры чет нечет
-        break;
-      case 'calc':
-        item = calc();// присвоение переменной модуля игры калькулятор
-        break;
-      case 'gcd':
-        item = gcd();// присвоение переменной модуля игры НОД
-        break;
-      case 'progression':
-        item = progression();// присвоение переменной модуля игры Ариф.прогрессия
-        break;
-      case 'prime':
-        item = prime();// присвоение переменной модуля игры Простое ли число?
-        break;
-      default:
-        console.log('Game not defined');
+  const winsCount = 3;// максимальное количество побед
+  for (let i = 0; i < winsCount; i += 1) { // пока счетчик меньше 3 выполняется цикл
+    const [corAnswer, answer] = game();
+    if (corAnswer !== answer) { // сравнение значений
+      error(answer, corAnswer, name);// в случае ошибки вызов модуля error
+      return;
     }
-    const [corAnswer, answer] = item;
-    if (corAnswer === answer) { // сравнение значений
-      console.log('Correct!');
-    } else {
-      return error(answer, corAnswer, name);// в случае ошибки вызов модуля error
-    }
+    console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}!`);// после трех верных ответов
+  console.log(`Congratulations, ${name}!`);// после трех верных ответов
 };
 
 export default games;
