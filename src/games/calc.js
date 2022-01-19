@@ -1,32 +1,29 @@
-import readlineSync from 'readline-sync';
-
-// функция рандомного задания выражения
-const randomExpr = () => {
-  const operand = ['+', '-', '*']; // список операторов
-  const i = Math.floor(Math.random() * 3);// рандомное определение нормера в списке операторов
-  const num1 = Math.floor(Math.random() * 3);// рандомное определение первого числа
-  const num2 = Math.floor(Math.random() * 3);// рандомное определение второго числа
-  const result = [num1, operand[i], num2];// массив из рандомных двух чисел и оперетора
+const expressinEvaluation = (num1, operand, num2) => {
+  let result = 0;
+  switch (operand) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      console.log('operand not difined');
+  }
   return result;
 };
 
 const calc = () => {
-  // определение рандомного выражения
-  const item = randomExpr();
-  const num1 = item[0];
-  const num2 = item[2];
-  console.log(`Question: ${num1} ${item[1]} ${num2}`); // вывод на экран выражения.
-  // подсчет результата рандомного выражения
-  let resultCalc = 0; // ввод переменной результата подсчета выражения
-  if (item[1] === '+') {
-    resultCalc = num1 + num2;
-  } if (item[1] === '-') {
-    resultCalc = num1 - num2;
-  } if (item[1] === '*') {
-    resultCalc = num1 * num2;
-  }
-  const answer = readlineSync.question('Your answer: '); // запрос ответа от пользователя;
-  return [resultCalc, Number(answer)];
+  const operands = ['+', '-', '*'];
+  const randomNum1 = Math.floor(Math.random() * 3);
+  const randomNum2 = Math.floor(Math.random() * 3);
+  const i = Math.floor(Math.random() * 3);
+  const question = `Question: ${randomNum1} ${operands[i]} ${randomNum2}`;
+  const resultCalc = expressinEvaluation(randomNum1, operands[i], randomNum2);
+  return [String(resultCalc), question];
 };
 
 export default calc;
