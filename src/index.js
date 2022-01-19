@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
-import acquaintance from './cli.js';
 import error from './games/error.js';
 
 const games = (rules, game) => {
-  const name = acquaintance();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(rules);
   const winsCount = 3;
   for (let i = 0; i < winsCount; i += 1) {
