@@ -1,21 +1,22 @@
-import acquaintance from './games/cli.js'; // импорт приветсвия
-import error from './games/error.js';// импорт вывода при ошибке пользователя
+import readlineSync from 'readline-sync';
+import acquaintance from './games/cli.js';
+import error from './games/error.js';
 
 const games = (rules, game) => {
-  const name = acquaintance();// приветствие и запрос имени пользователя
-  // объявление правил игры
+  const name = acquaintance();
   console.log(rules);
-  // запуск игры до трех побед
-  const winsCount = 3;// максимальное количество побед
-  for (let i = 0; i < winsCount; i += 1) { // пока счетчик меньше 3 выполняется цикл
-    const [corAnswer, answer] = game();
-    if (corAnswer !== answer) { // сравнение значений
-      error(answer, corAnswer, name);// в случае ошибки вызов модуля error
+  const winsCount = 3;
+  for (let i = 0; i < winsCount; i += 1) {
+    const [corAnswer, question] = game();
+    console.log(question);
+    const answer = readlineSync.question('Your answer: ');
+    if (corAnswer !== answer) {
+      error(answer, corAnswer, name);
       return;
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${name}!`);// после трех верных ответов
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default games;
