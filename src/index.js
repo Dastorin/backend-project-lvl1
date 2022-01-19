@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import acquaintance from './games/cli.js';
+import acquaintance from './cli.js';
 import error from './games/error.js';
 
 const games = (rules, game) => {
