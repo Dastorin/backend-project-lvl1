@@ -1,21 +1,15 @@
-import readlineSync from 'readline-sync';
-
-const prime = () => {
-  const num = Math.floor(Math.random() * 100) + 1;// рандомное определение числа
-  console.log(`Question: ${num}`);// вывод на экран вопроса
-  const answer = readlineSync.question('Your answer: '); // запрос ответа от пользователя;
-  // определение натуральности числа
-  let i = 1;
+const definitionPrime = () => {
+  const num = Math.floor(Math.random() * 100) + 1;
+  const question = `Question: ${num}`;
+  let divisor = 1;
   let result = 0;
-  while (i <= num / 2) {
-    if (num % i === 0) {
-      result = i;
+  while (divisor <= num / 2) {
+    if (num % divisor === 0) {
+      result = divisor;
     }
-    i += 1;
+    divisor += 1;
   }
-  if (result === 1) {
-    return ['yes', answer];
-  }
-  return ['no', answer];
+  const corAnswer = (result === 1) ? 'yes' : 'no';
+  return [corAnswer, question];
 };
-export default prime;
+export default definitionPrime;
