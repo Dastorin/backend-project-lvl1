@@ -1,6 +1,4 @@
-const definitionPrime = () => {
-  const num = Math.floor(Math.random() * 100) + 1;
-  const question = `Question: ${num}`;
+const isPrime = (num) => {
   let divisor = 1;
   let result = 0;
   while (divisor <= num / 2) {
@@ -9,7 +7,13 @@ const definitionPrime = () => {
     }
     divisor += 1;
   }
-  const corAnswer = (result === 1) ? 'yes' : 'no';
+  return (result === 1) ? 'yes' : 'no';
+};
+
+const prime = () => {
+  const num = Math.floor(Math.random() * 100) + 1;
+  const question = `Question: ${num}`;
+  const corAnswer = isPrime(num);
   return [corAnswer, question];
 };
-export default definitionPrime;
+export default prime;
