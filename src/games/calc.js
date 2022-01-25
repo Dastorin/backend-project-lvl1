@@ -16,8 +16,9 @@ const expressinEvaluation = (number1, number2, operation) => {
   }
 };
 
+const operations = ['+', '-', '*'];
+
 const calc = () => {
-  const operations = ['+', '-', '*'];
   const randomNum1 = getRundomNumber(3);
   const randomNum2 = getRundomNumber(3);
   const index = getRundomNumber(3);
