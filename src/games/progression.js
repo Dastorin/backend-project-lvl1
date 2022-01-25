@@ -1,6 +1,9 @@
-const generationProgression = (startNum, count, step) => {
+import getRundomNumber from './random.js';
+import games from '../index.js';
+
+const generationProgression = (startNumber, count, step) => {
   const result = [];
-  let num = startNum;
+  let num = startNumber;
   let i = 0;
   do {
     result.push(num);
@@ -10,15 +13,18 @@ const generationProgression = (startNum, count, step) => {
   return result;
 };
 
+const rules = 'What number is missing in the progression?';
+
 const progression = () => {
-  const startNum = Math.floor(Math.random() * 100);
-  const countElements = Math.floor(Math.random() * 5) + 5;
-  const stepProgression = Math.floor(Math.random() * 20) + 1;
-  const shadowElement = Math.floor(Math.random() * countElements);
-  const arithmeticProgres = generationProgression(startNum, countElements, stepProgression);
-  const corAnswer = arithmeticProgres[shadowElement];
+  const startNumber = getRundomNumber(100);
+  const countElements = getRundomNumber(5, 5);
+  const stepProgression = getRundomNumber(20, 1);
+  const shadowElement = getRundomNumber(countElements);
+  const arithmeticProgres = generationProgression(startNumber, countElements, stepProgression);
+  const correctAnswer = arithmeticProgres[shadowElement];
   arithmeticProgres[shadowElement] = '..';
   const question = `Question: ${arithmeticProgres.join(' ')}`;
-  return [String(corAnswer), question];
+  return [String(correctAnswer), question];
 };
-export default progression;
+
+export default () => games(rules, progression);
