@@ -10,7 +10,7 @@ const games = (rules, game) => {
   console.log(rules);
   for (let i = 0; i < winsCount; i += 1) {
     const [corAnswer, question] = game();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (corAnswer !== answer) {
       error(answer, corAnswer, name);
