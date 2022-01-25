@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import acquaintance from '../src/cli.js';
+import reqestName from '../src/cli.js';
 
-acquaintance();
+reqestName();
