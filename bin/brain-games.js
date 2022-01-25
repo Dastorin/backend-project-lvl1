@@ -1,4 +1,1 @@
-#!/usr/bin/env node
-import reqestName from '../src/cli.js';
-
-reqestName();
+console.log('Welcome to the Brain Games!');
