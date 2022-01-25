@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const winsCount = 3;
 
-const games = (rules, game) => {
+const identificationWinOrLoose = (rules, game) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -21,4 +21,4 @@ const games = (rules, game) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default games;
+export default identificationWinOrLoose;

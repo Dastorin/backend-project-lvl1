@@ -1,5 +1,5 @@
 import getRundomNumber from './random.js';
-import games from '../index.js';
+import identificationWinOrLoose from '../index.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -15,10 +15,10 @@ const isPrime = (number) => {
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const prime = () => {
+const generatePrime = () => {
   const number = getRundomNumber(100, 1);
   const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [correctAnswer, question];
 };
-export default () => games(rules, prime);
+export default () => identificationWinOrLoose(rules, generatePrime);
