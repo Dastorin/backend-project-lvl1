@@ -3,13 +3,11 @@ import games from '../index.js';
 
 const generationProgression = (startNumber, count, step) => {
   const result = [];
-  let num = startNumber;
-  let i = 0;
-  do {
-    result.push(num);
-    num += step;
-    i += 1;
-  } while (i < count);
+  let numberProgression = startNumber;
+  for (let index = 0; index < count; index += 1) {
+    result.push(numberProgression);
+    numberProgression += step;
+  }
   return result;
 };
 
