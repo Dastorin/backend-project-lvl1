@@ -1,3 +1,7 @@
+import games from '../index.js';
+
+const rules = 'What is the result of the expression?';
+
 const expressinEvaluation = (num1, operand, num2) => {
   let result = 0;
   switch (operand) {
@@ -26,4 +30,4 @@ const calc = () => {
   return [String(resultCalc), question];
 };
 
-export default calc;
+export default () => games(rules, calc);
