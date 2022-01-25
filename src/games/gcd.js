@@ -16,7 +16,7 @@ const rules = 'Find the greatest common divisor of given numbers.';
 const gcd = () => {
   const randomNumber1 = getRundomNumber(20, 1);
   const randomNumber2 = getRundomNumber(20, 1);
-  const question = `Question: ${randomNumber1} ${randomNumber2}`;
+  const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = isGcd(randomNumber1, randomNumber2);
   return [String(correctAnswer), question];
 };

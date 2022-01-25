@@ -23,7 +23,7 @@ const progression = () => {
   const arithmeticProgres = generationProgression(startNumber, countElements, stepProgression);
   const correctAnswer = arithmeticProgres[shadowElement];
   arithmeticProgres[shadowElement] = '..';
-  const question = `Question: ${arithmeticProgres.join(' ')}`;
+  const question = `${arithmeticProgres.join(' ')}`;
   return [String(correctAnswer), question];
 };
 

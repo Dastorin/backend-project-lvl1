@@ -17,7 +17,7 @@ const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const prime = () => {
   const number = getRundomNumber(100, 1);
-  const question = `Question: ${number}`;
+  const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [correctAnswer, question];
 };

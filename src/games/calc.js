@@ -23,7 +23,7 @@ const calc = () => {
   const randomNum2 = getRundomNumber(3);
   const index = getRundomNumber(operations.length);
   const operation = operations[index];
-  const question = `Question: ${randomNum1} ${operation} ${randomNum2}`;
+  const question = `${randomNum1} ${operation} ${randomNum2}`;
   const resultCalc = expressinEvaluation(randomNum1, randomNum2, operation);
   return [String(resultCalc), question];
 };

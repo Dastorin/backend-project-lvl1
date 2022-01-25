@@ -7,7 +7,7 @@ const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const definitionEvenOrOdd = () => {
   const randomNumber = getRundomNumber(100);
-  const question = `Question: ${randomNumber}`;
+  const question = `${randomNumber}`;
   const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
   return [correctAnswer, question];
 };
