@@ -1,19 +1,21 @@
-const isPrime = (num) => {
-  let divisor = 1;
-  let result = 0;
-  while (divisor <= num / 2) {
-    if (num % divisor === 0) {
-      result = divisor;
+import getRundomNumber from './random.js';
+import games from '../index.js';
+
+const isPrime = (number) => {
+  for (let divisor = 2; divisor <= number / 2; divisor += 1) {
+    if (number % divisor === 0) {
+      return false;
     }
-    divisor += 1;
   }
-  return (result === 1) ? 'yes' : 'no';
+  return true;
 };
 
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const prime = () => {
-  const num = Math.floor(Math.random() * 100) + 1;
-  const question = `Question: ${num}`;
-  const corAnswer = isPrime(num);
-  return [corAnswer, question];
+  const number = getRundomNumber(100, 1);
+  const question = `Question: ${number}`;
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  return [correctAnswer, question];
 };
-export default prime;
+export default () => games(rules, prime);
