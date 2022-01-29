@@ -5,10 +5,8 @@ const rules = 'What number is missing in the progression?';
 
 const getProgression = (startNumber, count, step) => {
   const result = [];
-  let numberProgression = startNumber;
   for (let index = 0; index < count; index += 1) {
-    result.push(numberProgression);
-    numberProgression += step;
+    result.push(startNumber + (step * index));
   }
   return result;
 };
