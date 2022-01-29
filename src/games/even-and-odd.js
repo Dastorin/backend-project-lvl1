@@ -7,7 +7,7 @@ const isEven = (number) => (number % 2 === 0);
 
 const definitionEvenOrOdd = () => {
   const randomNumber = getRundomNumber(100);
-  const question = `${randomNumber}`;
+  const question = randomNumber;
   const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
   return [correctAnswer, question];
 };
