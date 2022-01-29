@@ -2,6 +2,7 @@ import getRundomNumber from './random.js';
 import identificationWinOrLoose from '../index.js';
 
 const rules = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
 const expressinEvaluation = (number1, number2, operation) => {
   switch (operation) {
@@ -15,8 +16,6 @@ const expressinEvaluation = (number1, number2, operation) => {
       throw new Error(`operation ${operation} is not supported`);
   }
 };
-
-const operations = ['+', '-', '*'];
 
 const generateCalc = () => {
   const randomNum1 = getRundomNumber(3);

@@ -1,6 +1,8 @@
 import getRundomNumber from './random.js';
 import identificationWinOrLoose from '../index.js';
 
+const rules = 'What number is missing in the progression?';
+
 const getProgression = (startNumber, count, step) => {
   const result = [];
   let numberProgression = startNumber;
@@ -10,8 +12,6 @@ const getProgression = (startNumber, count, step) => {
   }
   return result;
 };
-
-const rules = 'What number is missing in the progression?';
 
 const generateProgression = () => {
   const startNumber = getRundomNumber(100);

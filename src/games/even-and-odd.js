@@ -1,9 +1,9 @@
 import getRundomNumber from './random.js';
 import games from '../index.js';
 
-const isEven = (number) => (number % 2 === 0);
-
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (number) => (number % 2 === 0);
 
 const definitionEvenOrOdd = () => {
   const randomNumber = getRundomNumber(100);
