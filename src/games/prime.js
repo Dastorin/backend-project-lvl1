@@ -1,4 +1,4 @@
-import getRundomNumber from './random.js';
+import getRundomNumber from '../random.js';
 import identificationWinOrLoose from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -16,7 +16,7 @@ const isPrime = (number) => {
 };
 
 const generatePrime = () => {
-  const number = getRundomNumber(100, 1);
+  const number = getRundomNumber(1, 100);
   const question = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [correctAnswer, question];

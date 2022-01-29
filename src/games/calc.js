@@ -1,4 +1,4 @@
-import getRundomNumber from './random.js';
+import getRundomNumber from '../random.js';
 import identificationWinOrLoose from '../index.js';
 
 const rules = 'What is the result of the expression?';
@@ -18,9 +18,9 @@ const expressinEvaluation = (number1, number2, operation) => {
 };
 
 const generateCalc = () => {
-  const randomNum1 = getRundomNumber(3);
-  const randomNum2 = getRundomNumber(3);
-  const index = getRundomNumber(operations.length);
+  const randomNum1 = getRundomNumber(0, 3);
+  const randomNum2 = getRundomNumber(0, 3);
+  const index = getRundomNumber(0, operations.length - 1);
   const operation = operations[index];
   const question = `${randomNum1} ${operation} ${randomNum2}`;
   const resultCalc = expressinEvaluation(randomNum1, randomNum2, operation);
