@@ -16,10 +16,10 @@ const generateProgression = () => {
   const countElements = getRundomNumber(5, 5);
   const stepProgression = getRundomNumber(20, 1);
   const shadowElement = getRundomNumber(countElements);
-  const arithmeticProgres = getProgression(startNumber, countElements, stepProgression);
-  const correctAnswer = arithmeticProgres[shadowElement];
-  arithmeticProgres[shadowElement] = '..';
-  const question = `${arithmeticProgres.join(' ')}`;
+  const arithmeticProgression = getProgression(startNumber, countElements, stepProgression);
+  const correctAnswer = arithmeticProgression[shadowElement];
+  arithmeticProgression[shadowElement] = '..';
+  const question = `${arithmeticProgression.join(' ')}`;
   return [String(correctAnswer), question];
 };
 
