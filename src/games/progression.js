@@ -4,13 +4,12 @@ import identificationWinOrLoose from '../index.js';
 const rules = 'What number is missing in the progression?';
 
 const getProgression = (start, count, step, hiddenIndex) => {
-  const progression = [];
+  const question = [];
   for (let index = 0; index < count; index += 1) {
-    progression.push(start + (step * index));
+    question.push(start + (step * index));
   }
-  const correctAnswer = progression[hiddenIndex];
-  progression[hiddenIndex] = '..';
-  const question = `${progression.join(' ')}`;
+  const correctAnswer = question[hiddenIndex];
+  question[hiddenIndex] = '..';
   return [String(correctAnswer), question];
 };
 
