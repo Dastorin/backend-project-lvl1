@@ -16,9 +16,8 @@ const isPrime = (number) => {
 };
 
 const generatePrime = () => {
-  const number = getRundomNumber(1, 100);
-  const question = `${number}`;
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  const question = getRundomNumber(1, 100);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [correctAnswer, question];
 };
 
