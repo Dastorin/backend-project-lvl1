@@ -9,7 +9,7 @@ const generateQuestion = (start, count, step, hiddenIndex) => {
     question.push(start + (step * index));
   }
   question[hiddenIndex] = '..';
-  return question;
+  return question.join(' ');
 };
 
 const generateProgression = () => {
