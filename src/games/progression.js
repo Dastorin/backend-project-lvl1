@@ -3,13 +3,13 @@ import identificationWinOrLoose from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const generateQuestion = (start, count, step, hiddenIndex) => {
-  const question = [];
+const question = (start, count, step, hiddenIndex) => {
+  const result = [];
   for (let index = 0; index < count; index += 1) {
-    question.push(start + (step * index));
+    result.push(start + (step * index));
   }
-  question[hiddenIndex] = '..';
-  return question.join(' ');
+  result[hiddenIndex] = '..';
+  return result.join(' ');
 };
 
 const generateProgression = () => {
@@ -18,7 +18,7 @@ const generateProgression = () => {
   const step = getRundomNumber(1, 20);
   const hiddenIndex = getRundomNumber(0, length - 1);
   const correctAnswer = start + step * (hiddenIndex);
-  return [String(correctAnswer), generateQuestion(start, length, step, hiddenIndex)];
+  return [String(correctAnswer), question(start, length, step, hiddenIndex)];
 };
 
 export default () => identificationWinOrLoose(rules, generateProgression);
