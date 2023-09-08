@@ -30,6 +30,8 @@ Games:
 ## Example 
 brain-even: [![asciicast](https://asciinema.org/a/453858.svg)](https://asciinema.org/a/453858)
 
+<script async id="asciicast-453858" src="https://asciinema.org/a/453858.js"></script>
+
 brain-calc: [![asciicast](https://asciinema.org/a/huJfbTe6B7fKk2XMZFtXUzX2G.svg)](https://asciinema.org/a/huJfbTe6B7fKk2XMZFtXUzX2G)
 
 brain-gcd: [![asciicast](https://asciinema.org/a/YiOnnbjekChVaGur28DyG8ZVH.svg)](https://asciinema.org/a/YiOnnbjekChVaGur28DyG8ZVH)
